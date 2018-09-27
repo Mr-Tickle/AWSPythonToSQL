@@ -1,11 +1,13 @@
+#import python modules we need for the project
 import os;
 import MySQLdb;
 
+#look in the folder for files and prints them out
 for file in os.listdir("C:\\Users\\Admin\\Documents"):
     print(file)
 
 
- 
+#make db connection 
 db = MySQLdb.connect(host="localhost",  # your host 
                      user="root",       # username
                      passwd="password,     # password
