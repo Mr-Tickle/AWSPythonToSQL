@@ -1,24 +1,27 @@
 #import python modules we need for the project
 import os;
-import MySQLdb;
+#import MySQLdb;
 
 #look in the folder for files and prints them out
 for file in os.listdir("C:\\Users\\Admin\\Documents"):
     print(file)
 
+#code to take the numbers from the start of a string
+str1 = "78gareth"
+print(int(filter(str.isdigit, str1)))
 
 #make db connection 
-db = MySQLdb.connect(host="localhost",  # your host 
-                     user="root",       # username
-                     passwd="password,     # password
-                     db="pythonspot")   # name of the database
+#db = MySQLdb.connect(host="localhost",  # your host 
+#                     user="root",       # username
+#                     passwd="password,     # password
+#                     db="pythonspot")   # name of the database
  
 # Create a Cursor object to execute queries.
-cur = db.cursor()
+#cur = db.cursor()
  
 # Select data from table using SQL query.
-cur.execute("SELECT * FROM examples")
+#cur.execute("SELECT * FROM examples")
  
 # print the first and second columns      
-for row in cur.fetchall() :
-    print row[0], " ", row[1]
+#for row in cur.fetchall() :
+#    print row[0], " ", row[1]
