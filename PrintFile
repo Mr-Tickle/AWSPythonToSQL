@@ -1,6 +1,19 @@
 #import python modules we need for the project
 import os;
+#pip install mysql-python - needed to install the sql connector
 #import MySQLdb;
+
+#method to add files to a list and then print them out.  Then do it again after sorting it.
+def sortList():
+    listOfFiles = []
+    for file in os.listdir("C:\\Users\\Admin\\Documents"):
+        listOfFiles.append(file)
+
+    for file in listOfFiles:
+        print(file)
+
+    for file in sorted(listOfFiles):
+        print(file)
 
 #look in the folder for files and prints them out
 for file in os.listdir("C:\\Users\\Admin\\Documents"):
@@ -9,6 +22,8 @@ for file in os.listdir("C:\\Users\\Admin\\Documents"):
 #code to take the numbers from the start of a string
 str1 = "78gareth"
 print(int(filter(str.isdigit, str1)))
+
+sortList()
 
 #make db connection 
 #db = MySQLdb.connect(host="localhost",  # your host 
